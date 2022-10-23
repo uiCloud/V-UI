@@ -1,0 +1,22 @@
+{
+  "name": "@qiubw-vui-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.8.4",
+    "vue": "^3.2.41"
+  },
+  "dependencies": {
+    "@qiubw-vui-test/components": "workspace:^0.0.1",
+    "@qiubw-vui-test/theme-chalk": "workspace:^0.0.1",
+    "@qiubw-vui-test/utils": "workspace:^0.0.1"
+  }
+}
