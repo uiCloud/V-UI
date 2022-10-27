@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["@qiubw-vui-test/eslint-config"]
+}

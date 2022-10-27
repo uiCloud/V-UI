@@ -1,4 +1,5 @@
 packages:
-  - "packages/**" # 存放所有组件
+  - packages/* # 存放所有组件
   - docs # 文档
   - play # 测试组件
+  - internal/* # 项目内部配置，比如es-lint

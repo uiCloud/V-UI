@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VIcon from "@qiubw-vui-test/components/icon";
+import VIcon from '@qiubw-vui-test/components/icon'
 </script>
 
 <template>

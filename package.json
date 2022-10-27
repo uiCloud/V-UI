@@ -1,22 +1,46 @@
 {
-  "name": "@qiubw-vui-test",
+  "name": "qiubw-vui-test",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "workspaces": [
+    "packages/*",
+    "play",
+    "docs"
+  ],
+  "keywords": [],
+  "license": "MIT",
+  "author": "qiubw",
   "scripts": {
     "dev": "pnpm -C play dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 && pretty-quick --check --branch dev",
+    "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json && pretty-quick --branch dev",
+    "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "@qiubw-vui-test/components": "workspace:*",
+    "@qiubw-vui-test/theme-chalk": "workspace:*",
+    "@qiubw-vui-test/utils": "workspace:*"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@qiubw-vui-test/eslint-config": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "@typescript-eslint/parser": "^5.40.1",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^8.26.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "fast-glob": "^3.2.11",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "mrm": "^4.1.13",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3",
     "typescript": "^4.8.4",
     "vue": "^3.2.41"
   },
-  "dependencies": {
-    "@qiubw-vui-test/components": "workspace:^0.0.1",
-    "@qiubw-vui-test/theme-chalk": "workspace:^0.0.1",
-    "@qiubw-vui-test/utils": "workspace:^0.0.1"
+  "lint-staged": {
+    "*.{vue,js,ts,jsx,tsx,md,json}": "eslint --fix"
   }
 }

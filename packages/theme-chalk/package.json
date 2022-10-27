@@ -2,12 +2,11 @@
   "name": "@qiubw-vui-test/theme-chalk",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "author": "qiubw",
+  "main": "index.js",
+  "scripts": {},
   "devDependencies": {
     "sass": "^1.51.0"
   }
